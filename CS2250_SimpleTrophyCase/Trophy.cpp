@@ -74,7 +74,7 @@ Trophy& Trophy::operator=(const Trophy& v) {
 }
 
 const bool Trophy::operator<(const Trophy& v) const {
-    if (compareTrophy(v) == -1) {
+    if (compareTrophy(v) < 0) {
         return true;
     }
     else {
@@ -84,7 +84,7 @@ const bool Trophy::operator<(const Trophy& v) const {
 
 const bool Trophy::operator>(const Trophy& v) const {
     //TODO Greater Than
-    if (compareTrophy(v) == 1) {
+    if (compareTrophy(v) > 0) {
         return true;
     }
     else {
@@ -113,7 +113,7 @@ const bool Trophy::operator!=(const Trophy& v) const {
 }
 
 const bool Trophy::operator<=(const Trophy& v) const {
-    if (compareTrophy(v) != 1) {
+    if (compareTrophy(v) <= 0) {
         return true;
     }
     else {
@@ -124,7 +124,7 @@ const bool Trophy::operator<=(const Trophy& v) const {
 
 const bool Trophy::operator>=(const Trophy& v) const {
     //TODO Greater Than Equal To
-    if (compareTrophy(v) != -1) {
+    if (compareTrophy(v) >= 0) {
         return true;
     }
     else {
